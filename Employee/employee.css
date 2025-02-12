@@ -20,7 +20,8 @@ html, body {
 
 
 body {
-  font-family: "Poppins";
+  font-family: "Poppins", serif;
+  font-style: normal;
   color: #333;
   position: relative;
   min-height: 100vh; 
@@ -45,13 +46,12 @@ header {
 }
 
 header .logo {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: lighter;
 }
 
 header nav ul {
   list-style: none;
-  font-weight: lighter;
   display: flex;
   gap: 100px;
 }
@@ -59,7 +59,7 @@ header nav ul {
 header nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: lighter;
   transition: opacity 0.3s;
 }
@@ -168,94 +168,95 @@ h1 {
 
 /* Footer Styles */
 .footer {
-    background-color: #7220D9;
-    color: #000000;
-    padding: 40px 0;
-    text-align: left;
-    width: 100%;
-    margin: 0 auto;
-  }
-  
-  .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .footer h2 {
-    font-family: "Poppins", serif;
-    font-weight: 200;
-    font-style: normal;
-    margin-bottom: 20px;
-    font-size: 20px;
-  }
-  
-  .footer p, .footer ul, .footer li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    line-height: 1.8;
-    font-family: "Poppins", serif;
-    font-weight: 200;
-    font-style: normal;
-    font-size: 16px;
-  }
-  
-  .footer-about, .footer-links, .footer-contact, .footer-social {
-    flex: 1;
-    padding-left: 30px;
-    min-width: 200px;
-    margin-bottom: 30px;
-  }
-  
-  .footer-links ul li a {
-    color: #000000;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  .footer-links ul li a:hover {
-    color: #edebf0;
-  }
-  
-  .footer-contact ul li {
-    margin-bottom: 10px;
-  }
-  
-  .footer-social ul {
-    display: flex;
-    align-items: center;
-  }
-  
-  .footer-social ul li {
-    margin-right: 15px;
-  }
-  
-  .footer-social ul li a {
-    color: #000000;
-    text-decoration: none;
-    transition: color 0.3s;
-    font-size: 32px;
-  }
-  
-  .footer-social ul li a:hover {
-    color: #e8e5ed;
-  }
-  
-  .footer-bottom {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #f4f7f6;
-    margin-top: 20px;
-    width: 100%;
-  }
-  
-  .footer-bottom p {
-    margin: 0;
-    font-size: 14px;
-  }
+  background-color: #7220D9;
+  color: #ffffff;
+  padding: 40px 0;
+  text-align: left;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer h2 {
+  font-family: "Poppins", serif;
+  font-weight: 200;
+  font-style: normal;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.footer p, .footer ul, .footer li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.8;
+  font-family: "Poppins", serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.footer-about, .footer-links, .footer-contact, .footer-social {
+  flex: 1;
+  padding-left: 30px;
+  min-width: 200px;
+  margin-bottom: 30px;
+}
+
+.footer-links ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #edebf0;
+}
+
+.footer-contact ul li {
+  margin-bottom: 10px;
+}
+
+.footer-social ul {
+  display: flex;
+  align-items: center;
+}
+
+.footer-social ul li {
+  margin-right: 15px;
+}
+
+.footer-social ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 32px;
+}
+
+.footer-social ul li a:hover {
+  color: #e8e5ed;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f4f7f6;
+  color: #000000;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+}
   
   /* Responsive Styles */
   @media (max-width: 768px) {

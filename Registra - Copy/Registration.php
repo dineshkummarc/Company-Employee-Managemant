@@ -110,8 +110,8 @@
             </div>
             <br>
 
-            <div class="form-group">
-                <button type="submit" id="submit-button">Submit</button>
+            <div class="form-group-sub">
+                <button type="submit" id="submit-button" style="color:#ffffff; background-color: transparent; border: none;font-size: 15px;">Submit</button>
             </div>
         </form>
     </div>
