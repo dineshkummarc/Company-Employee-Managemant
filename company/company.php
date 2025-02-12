@@ -24,6 +24,19 @@
         <h1>XYZ Company</h1>
         <h1 style="font-size:60px; margin-top: 20px;">Sole <strong>Company</strong><br> Proprietorship</h1>
         </div>
+
+        <main class="container">
+            <div class="content">
+                <h1>Owned by</h1>
+                <div class="highlight-container">
+                    <h1><span class="highlight">Miss. Navya Arora</span></h1>
+                    <span class="highlight2">CEO at XY</span>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="image/image1.jpg" alt="EMPLOYEE PIC">
+            </div>
+        </main>
     </section>
 
     <!-- footer -->
