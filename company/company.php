@@ -20,23 +20,76 @@
     </header>
 
     <section>
-        <div class="main-text">
-        <h1>XYZ Company</h1>
-        <h1 style="font-size:60px; margin-top: 20px;">Sole <strong>Company</strong><br> Proprietorship</h1>
+        <div class="home">
+            <div class="homeText">
+            <h1 style="font-size: 42px;">Company Name</h1>
+            <h1 style="font-size: 46px;">Sole Proprietorship Company</h1>
+            <h1 style="font-size: 42px;">CEO: Miss.Navya Arora</h1>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, dolores velit eaque autem ratione vitae non quia, sequi corrupti magnam accusantium quae reprehenderit accusamus doloribus.</h3>
+            </div>
+            <div class="homeImg">
+            <img src="image/image1.jpg" alt="">
+            </div>
         </div>
 
-        <main class="container">
-            <div class="content">
-                <h1>Owned by</h1>
-                <div class="highlight-container">
-                    <h1><span class="highlight">Miss. Navya Arora</span></h1>
-                    <span class="highlight2">CEO at XY</span>
+        <div class="aboutInfo">
+            <h1>About the Company</h1>
+            <div class="about">
+            <div class="aboutText">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione hic atque, error praesentium vero repellat quam ab voluptate corrupti dicta debitis voluptatibus, quibusdam quo natus ipsum temporibus accusamus fugit dolores eveniet blanditiis consequuntur laboriosam voluptates? Numquam, omnis, quibusdam, corrupti obcaecati quae vitae amet molestias eius nobis repudiandae iste eos ab! Fugiat perspiciatis nihil quidem ea unde. Iure temporibus voluptatibus asperiores quas, veritatis repellendus expedita magni dolor nam fugit natus nostrum illum, nemo sit harum eveniet quis porro, sapiente autem repudiandae tenetur corrupti ratione? Aut hic repudiandae magni fuga quo corrupti!</p>
+            </div>
+            <div class="aboutImg">
+                <img src="image/image1.jpg" alt="">
+            </div>
+            </div>
+        </div>
+
+        <div class="goal-container" id="goal">
+            <h1>Goals</h1>
+            <div class="goal-section">
+                <div class="goal-box">
+                    <h2>Daily</h2>
+                    <div class="content-box"></div>
+                </div>
+                <div class="goal-box">
+                    <h2>Weekly</h2>
+                    <div class="content-box"></div>
+                </div>
+                <div class="goal-box">
+                    <h2>Monthly</h2>
+                    <div class="content-box"></div>
+                </div>
+                <div class="goal-box">
+                    <h2>Yearly</h2>
+                    <div class="content-box"></div>
                 </div>
             </div>
-            <div class="image-container">
-                <img src="image/image1.jpg" alt="EMPLOYEE PIC">
+        </div>
+
+        <!-- summary -->
+        <div class="summary-container" id="summary">
+    <div class="summary-box">
+        <div class="card">
+            <h1>Revenue Generated</h1>
+            <div class="card-info">
+                <h1>6580</h1>
             </div>
-        </main>
+        </div>
+        <div class="card">
+            <h1>Amount Invested</h1>
+            <div class="card-info">
+                <h1>6580</h1>
+            </div>
+        </div>
+        <div class="card">
+            <h1>Loss Occurred</h1>
+            <div class="card-info">
+                <h1>6580</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
     </section>
 
     <!-- footer -->
