@@ -57,7 +57,7 @@ header {
 }
 
 header .logo {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: lighter;
 }
 
@@ -71,7 +71,7 @@ header nav ul {
 header nav ul li a {
   color: white;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: lighter;
   transition: opacity 0.3s;
 }
@@ -238,7 +238,7 @@ main {
 /* Footer Styles */
 .footer {
   background-color: #7220D9;
-  color: #ffffff;
+  color: #000000;
   padding: 40px 0;
   text-align: left;
   width: 100%;
@@ -280,7 +280,7 @@ main {
 }
 
 .footer-links ul li a {
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -303,7 +303,7 @@ main {
 }
 
 .footer-social ul li a {
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
   transition: color 0.3s;
   font-size: 32px;
@@ -317,7 +317,6 @@ main {
   text-align: center;
   padding: 20px 0;
   background-color: #f4f7f6;
-  color: #000000;
   margin-top: 20px;
   width: 100%;
 }
