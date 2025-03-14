@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 400px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header {
+    background-color: #8000ff;
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.hamburger {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    padding: 3px;
+}
+
+.hamburger span {
+    height: 3px;
+    background-color: #333;
+    margin: 2px 0;
+}
+
+.form-container {
+    background-color: #e0e0e0;
+    padding: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.form-group textarea {
+    width: 100%;
+    height: 80px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    box-sizing: border-box;
+    background-color: white;
+    resize: none;
+}
+
+.employees-group {
+    display: flex;
+    align-items: center;
+}
+
+.employees-group label {
+    margin-right: 10px;
+    flex: 1;
+}
+
+.employee-input {
+    width: 120px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    box-sizing: border-box;
+    background-color: white;
+}

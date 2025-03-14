@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font-family: "Poppins";
+  color: #333;
+  position: relative;
+  min-height: 100vh; /* Ensure body takes up full viewport height */
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('image.jpg') no-repeat center center/cover;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+header, main, footer {
+  z-index: 1;
+}
+
+header {
+  background-color: rgba(98, 0, 234, 0.8);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+header .logo {
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+header nav ul {
+  list-style: none;
+  font-weight: lighter;
+  display: flex;
+  gap: 100px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: lighter;
+  transition: opacity 0.3s;
+}
+
+header nav ul li a:hover {
+  opacity: 0.8;
+}
+
+main {
+  flex: 1; /* Allow main to grow and take up available space */
+  display: flex;
+  flex-direction: column; /* Stack sections vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Center text within sections */
+  color: #000;
+  padding: 40px 20px; /* Add some padding to the main area */
+}
+
+.content {
+  max-width: 800px; 
+  margin-top: 50px;
+  margin: 0 auto;
+}
+
+.content h1 {
+  font-size: 50px;
+  margin-bottom: 15px;
+  font-weight: 200;
+  margin-top: 120px;
+}
+
+.content p {
+  font-size: 25px;
+  font-weight: 200;
+  margin-bottom: 20px;
+  
+}
+
+.content h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.buttons button {
+  background-color: transparent;
+  color: #141414;
+  border: 2px solid;
+  border-color: rgba(98, 0, 234, 0.8);
+  padding: 13px 27px;
+  margin: 5px;
+  font-size: 19px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.buttons button:hover {
+  background-color: rgba(226, 230, 233, 0.833);
+  color: #1a1818;
+  border-color: #7220D9;
+}
+
+#about {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 40px;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.about-content {
+  max-width:1200px; 
+  margin-left: 40px;
+  display: flex; 
+  align-items: center; 
+}
+
+.text-content { 
+  flex: 1; 
+  text-align: left; 
+  padding-right: 20px; /* Add some space between text and image */
+ 
+}
+
+.about-content h2 {
+  font-size: 50px;
+  font-weight: 300; 
+  margin-bottom: 20px;
+  
+}
+
+.about-content p {
+  font-size: 22px;
+  font-weight: 200; 
+  line-height: 1.4; 
+  margin-bottom: 20px;
+  max-width: 550px; 
+  text-align: left;
+}
+
+.about-image {
+  max-width: 40%;
+  height: auto;
+  display: block;
+  margin-left: auto; /* Push image to the right */
+  margin-right: 0; /* Ensure no right margin */
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-content {
+      flex-direction: column; /* Stack on smaller screens */
+      align-items: flex-start; /* Align text to the left */
+  }
+
+  .text-content {
+      padding-right: 0; /* Remove padding on smaller screens */
+      margin-bottom: 20px; /* Add space between text and image */
+  }
+
+  .about-image {
+      max-width: 100%; /* Image takes full width on smaller screens */
+  }
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  header nav ul {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  header nav ul li a {
+      font-size: 24px;
+  }
+
+  main {
+      padding: 20px;
+  }
+
+  .content h1 {
+      font-size: 28px;
+  }
+
+  .content p {
+      font-size: 16px;
+  }
+
+  .buttons button {
+      padding: 8px 16px;
+      font-size: 16px;
+  }
+
+  
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #7220D9;
+  color: #000000;
+  padding: 40px 0;
+  text-align: left;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer h2 {
+  font-family: "Poppins", serif;
+  font-weight: 200;
+  font-style: normal;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.footer p, .footer ul, .footer li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.8;
+  font-family: "Poppins", serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.footer-about, .footer-links, .footer-contact, .footer-social {
+  flex: 1;
+  padding-left: 30px;
+  min-width: 200px;
+  margin-bottom: 30px;
+}
+
+.footer-links ul li a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #edebf0;
+}
+
+.footer-contact ul li {
+  margin-bottom: 10px;
+}
+
+.footer-social ul {
+  display: flex;
+  align-items: center;
+}
+
+.footer-social ul li {
+  margin-right: 15px;
+}
+
+.footer-social ul li a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 32px;
+}
+
+.footer-social ul li a:hover {
+  color: #e8e5ed;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f4f7f6;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .footer-about, .footer-links, .footer-contact, .footer-social {
+    padding-left: 0;
+    text-align: center;
+  }
+  
+  .footer-social ul {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 10px;
+  }
+
+  .footer h2 {
+    font-size: 18px;
+  }
+
+  .footer p, .footer ul li {
+    font-size: 10px;
+  }
+
+  .footer-social ul li a {
+    font-size: 24px;
+  }
+}
