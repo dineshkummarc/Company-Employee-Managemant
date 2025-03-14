@@ -1,0 +1,93 @@
+-- Create the database
+CREATE DATABASE IF NOT EXISTS company_db;
+USE company_db;
+
+-- Create companies table
+CREATE TABLE IF NOT EXISTS companies (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    admin_first_name VARCHAR(50) NOT NULL,
+    admin_last_name VARCHAR(50) NOT NULL,
+    ceo_name VARCHAR(100) NOT NULL,
+    ceo_image VARCHAR(255),
+    company_name VARCHAR(100) NOT NULL,
+    about_company TEXT,
+    ownership_type VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    company_logo VARCHAR(255),
+    employee_count INT(11),
+    department_count INT(11),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Create partners table
+CREATE TABLE IF NOT EXISTS partners (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    company_id INT(11),
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    FOREIGN KEY (company_id) REFERENCES companies(id) ON DELETE CASCADE
+);
+
+-- Create departments table
+CREATE TABLE IF NOT EXISTS departments (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    company_id INT(11),
+    name VARCHAR(100) NOT NULL,
+    FOREIGN KEY (company_id) REFERENCES companies(id) ON DELETE CASCADE
+);
+
+-- Create goals table for tracking company goals
+CREATE TABLE IF NOT EXISTS goals (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    company_id INT(11),
+    type ENUM('daily', 'weekly', 'monthly', 'yearly') NOT NULL,
+    description TEXT NOT NULL,
+    status ENUM('pending', 'completed', 'in-progress') DEFAULT 'pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (company_id) REFERENCES companies(id) ON DELETE CASCADE
+);
+
+-- Create financial_summary table to store financial data
+CREATE TABLE IF NOT EXISTS financial_summary (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    company_id INT(11),
+    revenue DECIMAL(12,2) DEFAULT 0,
+    investment DECIMAL(12,2) DEFAULT 0,
+    loss DECIMAL(12,2) DEFAULT 0,
+    period VARCHAR(20) NOT NULL, -- e.g., 'Q1 2024', 'March 2024'
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (company_id) REFERENCES companies(id) ON DELETE CASCADE
+);
+
+-- Create contacts table to store company contact information
+CREATE TABLE IF NOT EXISTS contacts (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    company_id INT(11),
+    email VARCHAR(100),
+    phone VARCHAR(20),
+    address TEXT,
+    FOREIGN KEY (company_id) REFERENCES companies(id) ON DELETE CASCADE
+);
+
+-- Create social_media table to store company social media links
+CREATE TABLE IF NOT EXISTS social_media (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    company_id INT(11),
+    platform VARCHAR(50) NOT NULL, -- e.g., 'facebook', 'twitter'
+    url VARCHAR(255) NOT NULL,
+    FOREIGN KEY (company_id) REFERENCES companies(id) ON DELETE CASCADE
+);
+
+
+
+
+
+-- Sample financial data
+INSERT INTO financial_summary (company_id, revenue, investment, loss, period)
+VALUES 
+(1, 85000.00, 50000.00, 15000.00, 'Q1 2024');
+
+-- Sample contact data
+INSERT INTO contacts (company_id, email, phone, address)
+VALUES 
+(1, 'info@samplecompany.com', '91+ 7310638297', 'Janakpuri, Delhi - 201301');
