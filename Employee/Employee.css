@@ -301,16 +301,13 @@ h1 {
 
 
 
+
 #goal {
   text-align: center;
   width: 100%;
- 
   padding: 2rem 0;
   padding-left: 4rem;
   padding-right: 4rem;
-  
-  
- 
 }
 
 .goal-container {
@@ -334,13 +331,12 @@ h1 {
   height: 3px;
   background-color: #222222;
   margin: 0 auto 20px auto;
-  
 }
 
 .goal-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 110px; 
   margin-top: 2rem;
   margin-bottom: 90px;
 }
@@ -351,6 +347,7 @@ h1 {
   padding: 1rem;
   color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 320px; 
 }
 
 .goal-box h2 {
@@ -361,48 +358,140 @@ h1 {
 
 .content-box {
   height: 180px;
-  width: 100%;
-  max-width: 300px;
-  min-width: 250px;
+  width: 90%;
   background-color: white;
   border-radius: 5px;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
 }
 
-/* For smaller devices */
-@media (max-width: 600px) {
-  .content-box {
-      height: 120px;
-      width: 90%;
+
+
+/* For tablets */
+@media (max-width: 992px) {
+  #goal {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .goal-container h1 {
+    font-size: 3.5rem;
+  }
+  
+  .goal-section {
+    gap: 50px;
+  }
+  
+  .goal-box {
+    width: 280px;
   }
 }
 
-/* For medium devices like tablets */
-@media (max-width: 900px) and (min-width: 601px) {
-  .content-box {
-      height: 150px;
-      width: 80%;
+/* For small tablets */
+@media (max-width: 768px) {
+  .goal-container h1 {
+    font-size: 3rem;
   }
-}
-
-
-@media (max-width: 600px) {
-  h1 {
-      font-size: 1.5rem;
+  
+  .goal-section {
+    gap: 30px;
   }
-
+  
+  .goal-box {
+    width: 250px;
+  }
+  
   .goal-box h2 {
-      font-size: 1.2rem;
+    font-size: 2rem;
   }
-
+  
   .content-box {
-      height: 120px;
+    height: 160px;
   }
+}
 
+/* For mobile phones */
+@media (max-width: 576px) {
+  #goal {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
   .goal-container {
-      padding: 1rem;
+    padding: 1rem;
+  }
+  
+  .goal-container h1 {
+    font-size: 2.5rem;
+  }
+  
+  .goal-container h1::after {
+    width: 100px;
+  }
+  
+  .goal-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .goal-box {
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  .goal-box h2 {
+    font-size: 1.8rem;
+  }
+  
+  .content-box {
+    height: 150px;
+  }
+}
+
+/* For very small mobile phones */
+@media (max-width: 360px) {
+  .goal-container h1 {
+    font-size: 2rem;
+  }
+  
+  .goal-box h2 {
+    font-size: 1.5rem;
+  }
+  
+  .content-box {
+    height: 130px;
   }
 }
 
 
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  header .logo {
+    margin-bottom: 10px;
+  }
+  
+  header nav ul {
+    gap: 20px;
+  }
+  
+  header nav ul li a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  header nav ul {
+    gap: 15px;
+  }
+  
+  header nav ul li a {
+    font-size: 16px;
+  }
+}
