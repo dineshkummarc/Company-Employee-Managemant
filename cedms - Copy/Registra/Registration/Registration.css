@@ -23,7 +23,7 @@ body {
     background-color: #ffffff;
     border: 2px solid #ccc;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
     overflow: hidden;
     margin: auto; 
 }
@@ -98,4 +98,13 @@ input[type="text"] {
 }
 .add-partner:hover {
     background-color: #5e199e;
+}
+#submit-button{
+    background-color: #7e22ce;
+    color: #ffffff;
+    text-align: center;
+    height:40px;
+    border-radius: 5px;
+    box-shadow: #7e22ce;
+    font-size: 20px;
 }

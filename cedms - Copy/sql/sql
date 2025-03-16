@@ -129,3 +129,36 @@ CREATE TABLE employees (
     deptName VARCHAR(191) NOT NULL,
     headName VARCHAR(191) NOT NULL
 );
+
+CREATE TABLE employee_main (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100) NOT NULL,
+    company VARCHAR(255) NOT NULL,
+    deptName VARCHAR(255) NOT NULL,
+    FOREIGN KEY (deptName) REFERENCES departments(deptName) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+ALTER TABLE employees 
+ADD CONSTRAINT fk_deptName 
+FOREIGN KEY (deptName) 
+REFERENCES departments(deptName) 
+ON DELETE CASCADE 
+ON UPDATE CASCADE;
+
+
+SELECT 
+    e.id AS Employee_ID,
+    e.empName AS Employee_Name,
+    e.email AS Email,
+    e.aboutEmployee AS About,
+    e.attendance_percentage AS Attendance,
+    e.dailyGoals AS Daily_Goals,
+    e.weeklyGoals AS Weekly_Goals,
+    e.joining_date AS Joining_Date,
+    e.deptName AS Department,
+    e.headName AS Head_Name,
+    em.username AS Employee_Username,
+    em.company AS Company
+FROM employees e
+INNER JOIN employee_main em ON e.deptName = em.deptName;
+

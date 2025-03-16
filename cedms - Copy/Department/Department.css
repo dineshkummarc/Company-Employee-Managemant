@@ -28,12 +28,15 @@ body {
 
 label h2 {
     font-size: 18px;
-    color: #212121;
+    color: black;
     margin-bottom: 5px;
 }
 .header h2 {
     margin: 0;
     font-size: 18px;
+}
+header li a{
+    color:white;
 }
 
 
@@ -45,30 +48,37 @@ label h2 {
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
+    position: absolute; /* Position it relative to the page */
+    top: 25px; /* Adjust top spacing */
+    right: 370px; /* Align to the right */
+    color: #ccc;
 }
 
 .hamburger span {
     display: block;
     height: 5px;
     width: 100%;
-    background: #333;
+    background: #ffffff;
     border-radius: 5px;
     transition: 0.3s;
+    left: 500px;
 }
 
+/* Ensure the menu appears below the hamburger */
 .menu {
-    display: none; /* Initially hidden */
+    display: none;
     position: absolute;
     top: 50px;
-    left: 930px;
-    background: #8000ff;
+    right: 300px; /* Align menu to the right */
+    background: #ffffff;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
     padding: 10px;
     border-radius: 5px;
     width: 200px;
+    color: white;
 }
 
-.menu.show { /* When .show class is added, the menu will appear */
+.menu.show {
     display: block;
 }
 
@@ -85,7 +95,7 @@ label h2 {
 }
 
 .menu ul li:hover {
-    color:#d0a2ff;
+    color: #d0a2ff;
 }
 
 

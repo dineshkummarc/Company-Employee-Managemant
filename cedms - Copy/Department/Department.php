@@ -18,7 +18,11 @@
             </div>
             <div class="menu">
     <ul>
-        <?php
+        <li><a href="department_20.php"> Marketing Departmment</li>
+        <li><a href="department_20.php"> Publicity Departmment</li>
+        <li><a href="department_20.php">  Departmment</li>
+        <li><a href="department_20.php">AI Departmment</li>
+        <!-- <?php
         include 'config.php';
         $sql = "SELECT deptName FROM department ORDER BY id DESC"; // Fetch departments
         $result = $conn->query($sql);
@@ -30,7 +34,7 @@
         } else {
             echo "<li>No Departments Available</li>";
         }
-        ?>
+        ?> -->
     </ul>
 </div>
     </div>

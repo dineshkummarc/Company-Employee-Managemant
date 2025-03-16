@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$empName', '$email', '$aboutEmployee', $attendance_percentage, '$dailyGoals', '$weeklyGoals', '$joining_date', '$deptName', '$headName')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "<script>alert('Employee added successfully!'); window.location.href = 'viewEmp.php';</script>";
+        echo "<script>alert('Employee added successfully!'); window.location.href = '../Employee/viewEmp.php';</script>";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

@@ -38,17 +38,14 @@ if ($result->num_rows > 0) {
     die("Company not found");
 }
 
-// Get departments
-$sql = "SELECT * FROM departments WHERE company_id = ?";
+$sql = "SELECT * FROM company_goals WHERE id = ? ORDER BY id DESC LIMIT 1";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $company_id);
 $stmt->execute();
-$departments_result = $stmt->get_result();
-$departments = [];
+$goals_result = $stmt->get_result();
+$goals = $goals_result->fetch_assoc();
 
-while ($row = $departments_result->fetch_assoc()) {
-    $departments[] = $row;
-}
+
 
 // Get partners if it's a partnership company
 $partners = [];
@@ -87,9 +84,9 @@ $conn->close();
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#footer">Contact</a></li>
+
+                <li><a href="../CURD/editDetails.php">All Departments</a></li>
+                <li><a href="../Department/Department.php">Create department</a></li>
             </ul>
         </nav>
     </header>
@@ -111,7 +108,7 @@ $conn->close();
                 <?php if (!empty($company['ceo_image'])): ?>
                     <img src="<?php echo htmlspecialchars($company['ceo_image']); ?>" alt="CEO Image">
                 <?php else: ?>
-                    <img src="image1.jpg" alt="Default Image">
+                    <img src="gr.png" alt="Default Image">
                 <?php endif; ?>
             </div>
         </div>
@@ -144,26 +141,35 @@ $conn->close();
         </div>
 
         <div class="goal-container" id="goal">
-            <h1>Goals</h1>
-            <div class="goal-section">
-                <div class="goal-box">
-                    <h2>Daily</h2>
-                    <div class="content-box"></div>
-                </div>
-                <div class="goal-box">
-                    <h2>Weekly</h2>
-                    <div class="content-box"></div>
-                </div>
-                <div class="goal-box">
-                    <h2>Monthly</h2>
-                    <div class="content-box"></div>
-                </div>
-                <div class="goal-box">
-                    <h2>Yearly</h2>
-                    <div class="content-box"></div>
-                </div>
+    <h1>Goals</h1>
+    <div class="goal-section">
+        <div class="goal-box">
+            <h2>Daily</h2>
+            <div class="content-box">
+                <p><?php echo !empty($goals['daily_goal']) ? htmlspecialchars($goals['daily_goal']) : "No goal set"; ?></p>
             </div>
         </div>
+        <div class="goal-box">
+            <h2>Weekly</h2>
+            <div class="content-box">
+                <p><?php echo !empty($weekGoal) ? htmlspecialchars($goals['week_goal']) : "No goal set"; ?></p>
+            </div>
+        </div>
+        <div class="goal-box">
+            <h2>Monthly</h2>
+            <div class="content-box">
+                <p><?php echo !empty($monthlyGoal) ? htmlspecialchars($goals['monthly_goal']) : "No goal set"; ?></p>
+            </div>
+        </div>
+        <div class="goal-box">
+            <h2>Yearly</h2>
+            <div class="content-box">
+                <p><?php echo !empty($goals['yearly_goal']) ? htmlspecialchars($goals['yearly_goal']) : "No goal set"; ?></p>
+            </div>
+        </div>
+    </div>
+</div>
+
 
         <!-- summary -->
         <div class="summary-container" id="summary">

@@ -10,11 +10,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $company_id = intval($_POST['company_id']); 
     $weekGoal = $conn->real_escape_string($_POST['weekGoal']);
     $monthlyGoal = $conn->real_escape_string($_POST['monthlyGoal']);
-    $deptImage = $conn->real_escape_string($_POST['deptImage']);
+    
 
     // Insert into department table
-    $sql = "INSERT INTO department (deptName, aboutDept, deptHead, aboutHEAD, company_id, weekGoal, monthlyGoal, deptImage) 
-            VALUES ('$deptName', '$aboutDept', '$deptHead', '$aboutHead', $company_id, '$weekGoal', '$monthlyGoal', '$deptImage')";
+    $sql = "INSERT INTO department (deptName, aboutDept, deptHead, aboutHEAD, company_id, weekGoal, monthlyGoal) 
+            VALUES ('$deptName', '$aboutDept', '$deptHead', '$aboutHead', $company_id, '$weekGoal', '$monthlyGoal')";
 
     if ($conn->query($sql) === TRUE) {
         // Get the ID of the newly inserted department
@@ -71,8 +71,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <button class=\"cta-button\"><?php echo htmlspecialchars(\$row['deptName']); ?> →</button>
             </div>
             <div class=\"image-container\">
-                <img src=\"<?php echo htmlspecialchars(\$row['deptImage']); ?>\" alt=\"Department Image\">
-            </div>
+    
+        <img src=\"..\company\gr.png\" alt=\"Default Image\">
+    
+</div>
+
         </section>
 
         <section class=\"about-section\" id=\"about\">

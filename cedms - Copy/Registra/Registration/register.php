@@ -71,15 +71,12 @@ if ($conn->query($sql) !== TRUE) {
 // Process form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form data
-    $admin_first_name = $_POST['first_name'];
-    $admin_last_name = $_POST['last_name'];
     $ceo_name = $_POST['ceo_name'];
     $company_name = $_POST['company_name'];
     $about_company = $_POST['about_company'];
     $ownership_type = $_POST['ownership'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash the password
-    $employee_count = $_POST['employees'];
-    $department_count = $_POST['departments'];
+    
     
     // Handle CEO image upload
     $ceo_image = "";
@@ -110,8 +107,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     
     // Insert company data
-    $stmt = $conn->prepare("INSERT INTO companies (admin_first_name, admin_last_name, ceo_name, ceo_image, company_name, about_company, ownership_type, password, company_logo, employee_count, department_count) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssssssssii", $admin_first_name, $admin_last_name, $ceo_name, $ceo_image, $company_name, $about_company, $ownership_type, $password, $company_logo, $employee_count, $department_count);
+    $stmt = $conn->prepare("INSERT INTO companies (ceo_name, ceo_image, company_name, about_company, ownership_type, password, company_logo) VALUES ( ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssssss",  $ceo_name, $ceo_image, $company_name, $about_company, $ownership_type, $password, $company_logo);
     
     if ($stmt->execute()) {
         $company_id = $conn->insert_id;
