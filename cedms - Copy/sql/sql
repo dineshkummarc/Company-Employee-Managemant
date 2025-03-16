@@ -35,6 +35,18 @@ CREATE TABLE IF NOT EXISTS departments (
     name VARCHAR(100) NOT NULL,
     FOREIGN KEY (company_id) REFERENCES companies(id) ON DELETE CASCADE
 );
+CREATE TABLE IF NOT EXISTS department (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    deptName TEXT NOT NULL PRIMARY KEY,
+    aboutDept TEXT NOT NULL,
+    deptHead TEXT NOT NULL,
+    aboutHEAD TEXT NOT NULL,
+    company_id INT(11),
+    type ENUM( 'weekly', 'monthly') NOT NULL,
+    description TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (company_id) REFERENCES companies(id) ON DELETE CASCADE
+);
 
 -- Create goals table for tracking company goals
 CREATE TABLE IF NOT EXISTS goals (
@@ -91,3 +103,29 @@ VALUES
 INSERT INTO contacts (company_id, email, phone, address)
 VALUES 
 (1, 'info@samplecompany.com', '91+ 7310638297', 'Janakpuri, Delhi - 201301');
+
+ALTER TABLE department ADD COLUMN weekGoal TEXT;
+ALTER TABLE department ADD COLUMN monthlyGoal TEXT;
+ALTER TABLE department DROP COLUMN description;
+
+ALTER TABLE department 
+ADD CONSTRAINT fk_department_company FOREIGN KEY (company_id) 
+REFERENCES companies(id) ON DELETE CASCADE;
+
+ALTER TABLE financial_summary 
+ADD COLUMN department_id INT(11),
+ADD CONSTRAINT fk_financial_summary_department FOREIGN KEY (department_id) 
+REFERENCES department(id) ON DELETE CASCADE;
+
+CREATE TABLE employees (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    empName VARCHAR(191) NOT NULL,
+    email VARCHAR(191) UNIQUE NOT NULL,
+    aboutEmployee TEXT,
+    attendance_percentage DECIMAL(5,2) CHECK (attendance_percentage BETWEEN 0 AND 100),
+    dailyGoals TEXT,
+    weeklyGoals TEXT,
+    joining_date DATE NOT NULL,
+    deptName VARCHAR(191) NOT NULL,
+    headName VARCHAR(191) NOT NULL
+);

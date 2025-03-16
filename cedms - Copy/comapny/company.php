@@ -5,7 +5,7 @@ session_start();
 // Check if company_id is set in session
 if (!isset($_SESSION['company_id'])) {
     // If not logged in or registered, redirect to registration page
-    header("Location: ../../Registra/Registration/Registration.php");
+    header("Location: ../Registra/Registration/Registration.php");
     exit();
 }
 
