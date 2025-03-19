@@ -1,4 +1,3 @@
-<<<<<<< HEAD:cedms - Copy/comapny/company.php
 <?php
 // Start session to access stored company_id
 session_start();
