@@ -7,42 +7,85 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <script src="main.js"></script> 
     <header>
+
+        <input type="checkbox" name="" id="toggler">
+    <label  onclick=showSidebar() for="toggler" class="fas fa-bars" id="menu-icon"></label>
+
         <div class="logo">Logo</div>
         <nav>
+            <div class="sidebar">
+                <ul>
+                    <li onclick=hideSidebar()><a href="#"><i class="ri-arrow-right-wide-line"></i></a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#footer">Contact</a></li>
+        </ul>
+            </div>
+        
+            <div class="navbar">
             <ul>
+                
+
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#footer">Contact</a></li>
+                <li onclickk></li>
             </ul>
+            </div>
         </nav>
     </header>
 
     <main>
-        <section id="home">
-            <div class="content">
-                <h1>Tell Us More About Your Company</h1>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
-                <h2>Register Now</h2>
-                <div class="buttons">
-                    <a href="../Registra/Registration/Registration.php">
-                    <button>Company</button>
-                </a>
-                
-                    <a href="../employee/employee.php"><button>Employee</button>
-                </a>
-                </div>
-            </div>
-        </section>
+        
 
         <section id="about">
           <div class="about-content">
-              <div class="text-content">  <h2>A step towards<br> better management</h2>
-                  <p>This is the about us section. You can add details about your company's mission, vision, history, team, and other relevant information here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <div class="text-content">  <h2>Tell Us about<br> your company</h2>
+                  <a href=""><button>Company</button></a>
+                  <a href=""><button>Employee</button></a>
+
               </div>
-              <img src="image2.jpg" alt="About Us Image" class="about-image">
+              <img src="Free Photo _ Entrepreneurs discussing work results on meeting.jpeg" alt="About Us Image" class="about-image">
           </div>
+      </section>
+
+      
+
+      <section class="aboutUs">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quo animi ex dolor aliquid quis cupiditate dolorem consequatur alias odit numquam, provident, labore accusantium doloremque in? Delectus, iste. Voluptatum libero fugiat aut, cum explicabo atque vero quos, facilis dicta omnis veritatis totam rerum pariatur laudantium commodi nesciunt. Veritatis ratione error fuga libero laudantium officia magni exercitationem voluptatem voluptatibus praesentium aut, beatae cupiditate repellendus ipsam. Deleniti consequuntur odit repudiandae, ratione quod placeat reprehenderit assumenda obcaecati optio magni consequatur hic reiciendis laudantium.</p>
+      </section>
+
+      <section class="services">
+        <h1>Services offered
+        </h1>
+        <div class="service">
+        <div class="container">
+            <h2>Service1</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, voluptatem illum ea nemo nobis dolorem voluptates. Provident sequi id sed!</p>
+        </div>
+        <div class="container">
+            <h2>Service1</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, voluptatem illum ea nemo nobis dolorem voluptates. Provident sequi id sed!</p>
+        </div>
+        <div class="container">
+            <h2>Service1</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, voluptatem illum ea nemo nobis dolorem voluptates. Provident sequi id sed!</p>
+        </div>
+        <div class="container">
+            <h2>Service1</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, voluptatem illum ea nemo nobis dolorem voluptates. Provident sequi id sed!</p>
+        </div>
+        <div class="container">
+            <h2>Service1</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, voluptatem illum ea nemo nobis dolorem voluptates. Provident sequi id sed!</p>
+        </div>
+    </div>
+        
       </section>
 
     </main>
