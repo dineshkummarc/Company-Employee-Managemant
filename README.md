@@ -62,14 +62,19 @@ Taskify is a software application designed to efficiently manage employee record
 ## 📂 Project Structure
 
 taskify/
+<br>
 ├── css/ # Stylesheets
 <br>
 ├── js/ # JavaScript files
 <br>
 ├── php/ # PHP logic
+<br>
 ├── images/ # Image assets
+<br>
 ├── database/ # SQL file for DB setup
+<br>
 ├── index.html # Main landing page
+<br>
 └── README.md # Project documentation
 
 
